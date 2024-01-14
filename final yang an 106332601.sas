@@ -27,7 +27,7 @@ run;
  else Agediff = 0; 
 run;
 
-%MACRO MYCHI(varname,varlable,varformat,date);
+%MACRO MYCHI(varname,varlable,varformat,dataset);
 
 /*work*/
 ods output CrossTabFreqs=CTF (where=(Q31_1=1 & RowPercent ne .))
@@ -284,7 +284,7 @@ var frequency rowpercent prob;
  ALL*prob*mean*f=10.4;
  run;
  %MEND;
- %MYCHI(PPGENDER, PPGENDER, genformat., date);
+ %MYCHI(PPGENDER, PPGENDER, genformat., fin.my_hcmst);
  
  DATA fin.my_hcmst;
     SET fin.my_hcmst;
@@ -292,4 +292,4 @@ var frequency rowpercent prob;
     ELSE IF NOT MISSING(RELATIONSHIP_QUALITY) THEN Excellent_Indicator = 0;
     ELSE Excellent_Indicator = .;
 RUN;
-%MYCHI(Excellent_Indicator,  Excellent_Indicator, eiformat., date);
+%MYCHI(Excellent_Indicator,  Excellent_Indicator, eiformat., fin.my_hcmst);
