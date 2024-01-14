@@ -284,7 +284,7 @@ var frequency rowpercent prob;
  ALL*prob*mean*f=10.4;
  run;
  %MEND;
- %MYCHI(PPGENDER, PPGENDER, genformat., fin.my_hcmst);
+ %MYCHI(PPGENDER, PPGENDER, genformat., date);
  
  DATA fin.my_hcmst;
     SET fin.my_hcmst;
@@ -292,4 +292,4 @@ var frequency rowpercent prob;
     ELSE IF NOT MISSING(RELATIONSHIP_QUALITY) THEN Excellent_Indicator = 0;
     ELSE Excellent_Indicator = .;
 RUN;
-%MYCHI(Excellent_Indicator,  Excellent_Indicator, eiformat., final.my_hcmst);
+%MYCHI(Excellent_Indicator,  Excellent_Indicator, eiformat., date);
