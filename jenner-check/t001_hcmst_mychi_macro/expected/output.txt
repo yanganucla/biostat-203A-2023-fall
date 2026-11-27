@@ -1,0 +1,1676 @@
+                                                   The Jenner System               16:41 Friday, November 27, 2026     1
+
+                                                   The FREQ Procedure
+
+                                               Table of Q31_1 by PPGENDER
+
+                                          Q31_1     PPGENDER
+
+                                          Frequency|
+                                          Row Pct  |       1|       2|  Total
+                                          ---------+--------+--------+
+                                                 0 |     11 |     14 |     25
+                                                   |  44.00 |  56.00 |
+                                          ---------+--------+--------+
+                                                 1 |      8 |      7 |     15
+                                                   |  53.33 |  46.67 |
+                                          ---------+--------+--------+
+                                          Total          19       21       40
+
+                                       Statistics for Table of Q31_1 by PPGENDER
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1      0.3275    0.5671
+                                 Likelihood Ratio Chi-Square    1      0.3275    0.5671
+                                 Continuity Adj. Chi-Square     1      0.0602    0.8063
+                                 Mantel-Haenszel Chi-Square     1      0.3193    0.5720
+                                 Phi Coefficient                      -0.0905
+                                 Contingency Coefficient               0.0901
+                                 Cramer's V                           -0.0905
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                           11
+                                 Left-sided Pr <= F                             0.4029
+                                 Right-sided Pr >= F                            0.8156
+
+                                 Table Probability (P)                          0.2185
+                                 Two-sided Pr <= P                              0.7451
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026     2
+
+                                                   The FREQ Procedure
+
+                                               Table of Q31_2 by PPGENDER
+
+                                          Q31_2     PPGENDER
+
+                                          Frequency|
+                                          Row Pct  |       1|       2|  Total
+                                          ---------+--------+--------+
+                                                 0 |     14 |     12 |     26
+                                                   |  53.85 |  46.15 |
+                                          ---------+--------+--------+
+                                                 1 |      5 |      9 |     14
+                                                   |  35.71 |  64.29 |
+                                          ---------+--------+--------+
+                                          Total          19       21       40
+
+                                       Statistics for Table of Q31_2 by PPGENDER
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1      1.1997    0.2734
+                                 Likelihood Ratio Chi-Square    1      1.2129    0.2708
+                                 Continuity Adj. Chi-Square     1      0.5828    0.4452
+                                 Mantel-Haenszel Chi-Square     1      1.1697    0.2795
+                                 Phi Coefficient                       0.1732
+                                 Contingency Coefficient               0.1706
+                                 Cramer's V                            0.1732
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                           14
+                                 Left-sided Pr <= F                             0.9240
+                                 Right-sided Pr >= F                            0.2233
+
+                                 Table Probability (P)                          0.1473
+                                 Two-sided Pr <= P                              0.3329
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026     3
+
+                                                   The FREQ Procedure
+
+                                               Table of Q31_3 by PPGENDER
+
+                                          Q31_3     PPGENDER
+
+                                          Frequency|
+                                          Row Pct  |       1|       2|  Total
+                                          ---------+--------+--------+
+                                                 0 |     13 |     13 |     26
+                                                   |  50.00 |  50.00 |
+                                          ---------+--------+--------+
+                                                 1 |      6 |      8 |     14
+                                                   |  42.86 |  57.14 |
+                                          ---------+--------+--------+
+                                          Total          19       21       40
+
+                                       Statistics for Table of Q31_3 by PPGENDER
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1      0.1862    0.6661
+                                 Likelihood Ratio Chi-Square    1      0.1867    0.6657
+                                 Continuity Adj. Chi-Square     1      0.0099    0.9207
+                                 Mantel-Haenszel Chi-Square     1      0.1815    0.6701
+                                 Phi Coefficient                       0.0682
+                                 Contingency Coefficient               0.0681
+                                 Cramer's V                            0.0682
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                           13
+                                 Left-sided Pr <= F                             0.7767
+                                 Right-sided Pr >= F                            0.4612
+
+                                 Table Probability (P)                          0.2379
+                                 Two-sided Pr <= P                              0.7475
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026     4
+
+                                                   The FREQ Procedure
+
+                                               Table of Q31_4 by PPGENDER
+
+                                          Q31_4     PPGENDER
+
+                                          Frequency|
+                                          Row Pct  |       1|       2|  Total
+                                          ---------+--------+--------+
+                                                 0 |     12 |     12 |     24
+                                                   |  50.00 |  50.00 |
+                                          ---------+--------+--------+
+                                                 1 |      7 |      9 |     16
+                                                   |  43.75 |  56.25 |
+                                          ---------+--------+--------+
+                                          Total          19       21       40
+
+                                       Statistics for Table of Q31_4 by PPGENDER
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1      0.1504    0.6982
+                                 Likelihood Ratio Chi-Square    1      0.1506    0.6979
+                                 Continuity Adj. Chi-Square     1      0.0042    0.9485
+                                 Mantel-Haenszel Chi-Square     1      0.1466    0.7018
+                                 Phi Coefficient                       0.0613
+                                 Contingency Coefficient               0.0612
+                                 Cramer's V                            0.0613
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                           12
+                                 Left-sided Pr <= F                             0.7609
+                                 Right-sided Pr >= F                            0.4748
+
+                                 Table Probability (P)                          0.2356
+                                 Two-sided Pr <= P                              0.7553
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026     5
+
+                                                   The FREQ Procedure
+
+                                               Table of Q31_5 by PPGENDER
+
+                                          Q31_5     PPGENDER
+
+                                          Frequency|
+                                          Row Pct  |       1|       2|  Total
+                                          ---------+--------+--------+
+                                                 0 |     15 |     13 |     28
+                                                   |  53.57 |  46.43 |
+                                          ---------+--------+--------+
+                                                 1 |      4 |      8 |     12
+                                                   |  33.33 |  66.67 |
+                                          ---------+--------+--------+
+                                          Total          19       21       40
+
+                                       Statistics for Table of Q31_5 by PPGENDER
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1      1.3796    0.2402
+                                 Likelihood Ratio Chi-Square    1      1.4021    0.2364
+                                 Continuity Adj. Chi-Square     1      0.6874    0.4070
+                                 Mantel-Haenszel Chi-Square     1      1.3451    0.2461
+                                 Phi Coefficient                       0.1857
+                                 Contingency Coefficient               0.1826
+                                 Cramer's V                            0.1857
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                           15
+                                 Left-sided Pr <= F                             0.9370
+                                 Right-sided Pr >= F                            0.2042
+
+                                 Table Probability (P)                          0.1412
+                                 Two-sided Pr <= P                              0.3109
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026     6
+
+                                                   The FREQ Procedure
+
+                                               Table of Q31_6 by PPGENDER
+
+                                          Q31_6     PPGENDER
+
+                                          Frequency|
+                                          Row Pct  |       1|       2|  Total
+                                          ---------+--------+--------+
+                                                 0 |     15 |     17 |     32
+                                                   |  46.88 |  53.13 |
+                                          ---------+--------+--------+
+                                                 1 |      4 |      4 |      8
+                                                   |  50.00 |  50.00 |
+                                          ---------+--------+--------+
+                                          Total          19       21       40
+
+                                       Statistics for Table of Q31_6 by PPGENDER
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1      0.0251    0.8742
+                                 Likelihood Ratio Chi-Square    1      0.0250    0.8743
+                                 Continuity Adj. Chi-Square     1      0.0000    1.0000
+                                 Mantel-Haenszel Chi-Square     1      0.0244    0.8758
+                                 Phi Coefficient                      -0.0250
+                                 Contingency Coefficient               0.0250
+                                 Cramer's V                           -0.0250
+
+            WARNING: 50% of the cells have expected counts less than 5. Chi-Square may not be a valid test.
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                           15
+                                 Left-sided Pr <= F                             0.5916
+                                 Right-sided Pr >= F                            0.7101
+
+                                 Table Probability (P)                          0.3016
+                                 Two-sided Pr <= P                              1.0000
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026     7
+
+                                                   The FREQ Procedure
+
+                                               Table of Q31_7 by PPGENDER
+
+                                          Q31_7     PPGENDER
+
+                                          Frequency|
+                                          Row Pct  |       1|       2|  Total
+                                          ---------+--------+--------+
+                                                 0 |      7 |     18 |     25
+                                                   |  28.00 |  72.00 |
+                                          ---------+--------+--------+
+                                                 1 |     12 |      3 |     15
+                                                   |  80.00 |  20.00 |
+                                          ---------+--------+--------+
+                                          Total          19       21       40
+
+                                       Statistics for Table of Q31_7 by PPGENDER
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1     10.1654    0.0014
+                                 Likelihood Ratio Chi-Square    1     10.6920    0.0011
+                                 Continuity Adj. Chi-Square     1      8.1871    0.0042
+                                 Mantel-Haenszel Chi-Square     1      9.9113    0.0016
+                                 Phi Coefficient                      -0.5041
+                                 Contingency Coefficient               0.4502
+                                 Cramer's V                           -0.5041
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                            7
+                                 Left-sided Pr <= F                             0.0018
+                                 Right-sided Pr >= F                            0.9999
+
+                                 Table Probability (P)                          0.0017
+                                 Two-sided Pr <= P                              0.0027
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026     8
+
+                                                   The FREQ Procedure
+
+                                               Table of Q31_8 by PPGENDER
+
+                                          Q31_8     PPGENDER
+
+                                          Frequency|
+                                          Row Pct  |       1|       2|  Total
+                                          ---------+--------+--------+
+                                                 0 |     13 |     14 |     27
+                                                   |  48.15 |  51.85 |
+                                          ---------+--------+--------+
+                                                 1 |      6 |      7 |     13
+                                                   |  46.15 |  53.85 |
+                                          ---------+--------+--------+
+                                          Total          19       21       40
+
+                                       Statistics for Table of Q31_8 by PPGENDER
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1      0.0140    0.9058
+                                 Likelihood Ratio Chi-Square    1      0.0140    0.9058
+                                 Continuity Adj. Chi-Square     1      0.0000    1.0000
+                                 Mantel-Haenszel Chi-Square     1      0.0136    0.9070
+                                 Phi Coefficient                       0.0187
+                                 Contingency Coefficient               0.0187
+                                 Cramer's V                            0.0187
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                           13
+                                 Left-sided Pr <= F                             0.6748
+                                 Right-sided Pr >= F                            0.5874
+
+                                 Table Probability (P)                          0.2622
+                                 Two-sided Pr <= P                              1.0000
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026     9
+
+                                                   The FREQ Procedure
+
+                                               Table of Q31_9 by PPGENDER
+
+                                          Q31_9     PPGENDER
+
+                                          Frequency|
+                                          Row Pct  |       1|       2|  Total
+                                          ---------+--------+--------+
+                                                 0 |     14 |     15 |     29
+                                                   |  48.28 |  51.72 |
+                                          ---------+--------+--------+
+                                                 1 |      5 |      6 |     11
+                                                   |  45.45 |  54.55 |
+                                          ---------+--------+--------+
+                                          Total          19       21       40
+
+                                       Statistics for Table of Q31_9 by PPGENDER
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1      0.0255    0.8732
+                                 Likelihood Ratio Chi-Square    1      0.0255    0.8732
+                                 Continuity Adj. Chi-Square     1      0.0000    1.0000
+                                 Mantel-Haenszel Chi-Square     1      0.0248    0.8748
+                                 Phi Coefficient                       0.0252
+                                 Contingency Coefficient               0.0252
+                                 Cramer's V                            0.0252
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                           14
+                                 Left-sided Pr <= F                             0.6950
+                                 Right-sided Pr >= F                            0.5780
+
+                                 Table Probability (P)                          0.2729
+                                 Two-sided Pr <= P                              1.0000
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026    10
+
+                                                   The FREQ Procedure
+
+                                               Table of Q33_1 by PPGENDER
+
+                                          Q33_1     PPGENDER
+
+                                          Frequency|
+                                          Row Pct  |       1|       2|  Total
+                                          ---------+--------+--------+
+                                                 0 |     13 |     17 |     30
+                                                   |  43.33 |  56.67 |
+                                          ---------+--------+--------+
+                                                 1 |      6 |      4 |     10
+                                                   |  60.00 |  40.00 |
+                                          ---------+--------+--------+
+                                          Total          19       21       40
+
+                                       Statistics for Table of Q33_1 by PPGENDER
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1      0.8354    0.3607
+                                 Likelihood Ratio Chi-Square    1      0.8376    0.3601
+                                 Continuity Adj. Chi-Square     1      0.3008    0.5834
+                                 Mantel-Haenszel Chi-Square     1      0.8145    0.3668
+                                 Phi Coefficient                      -0.1445
+                                 Contingency Coefficient               0.1430
+                                 Cramer's V                           -0.1445
+
+            WARNING: 25% of the cells have expected counts less than 5. Chi-Square may not be a valid test.
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                           13
+                                 Left-sided Pr <= F                             0.2918
+                                 Right-sided Pr >= F                            0.8998
+
+                                 Table Probability (P)                          0.1916
+                                 Two-sided Pr <= P                              0.4727
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026    11
+
+                                                   The FREQ Procedure
+
+                                               Table of Q33_2 by PPGENDER
+
+                                          Q33_2     PPGENDER
+
+                                          Frequency|
+                                          Row Pct  |       1|       2|  Total
+                                          ---------+--------+--------+
+                                                 0 |     14 |      8 |     22
+                                                   |  63.64 |  36.36 |
+                                          ---------+--------+--------+
+                                                 1 |      5 |     13 |     18
+                                                   |  27.78 |  72.22 |
+                                          ---------+--------+--------+
+                                          Total          19       21       40
+
+                                       Statistics for Table of Q33_2 by PPGENDER
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1      5.1047    0.0239
+                                 Likelihood Ratio Chi-Square    1      5.2402    0.0221
+                                 Continuity Adj. Chi-Square     1      3.7680    0.0522
+                                 Mantel-Haenszel Chi-Square     1      4.9771    0.0257
+                                 Phi Coefficient                       0.3572
+                                 Contingency Coefficient               0.3364
+                                 Cramer's V                            0.3572
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                           14
+                                 Left-sided Pr <= F                             0.9955
+                                 Right-sided Pr >= F                            0.0253
+
+                                 Table Probability (P)                          0.0209
+                                 Two-sided Pr <= P                              0.0309
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026    12
+
+                                                   The FREQ Procedure
+
+                                               Table of Q33_3 by PPGENDER
+
+                                          Q33_3     PPGENDER
+
+                                          Frequency|
+                                          Row Pct  |       1|       2|  Total
+                                          ---------+--------+--------+
+                                                 0 |     11 |     18 |     29
+                                                   |  37.93 |  62.07 |
+                                          ---------+--------+--------+
+                                                 1 |      8 |      3 |     11
+                                                   |  72.73 |  27.27 |
+                                          ---------+--------+--------+
+                                          Total          19       21       40
+
+                                       Statistics for Table of Q33_3 by PPGENDER
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1      3.8721    0.0491
+                                 Likelihood Ratio Chi-Square    1      3.9647    0.0465
+                                 Continuity Adj. Chi-Square     1      2.6024    0.1067
+                                 Mantel-Haenszel Chi-Square     1      3.7753    0.0520
+                                 Phi Coefficient                      -0.3111
+                                 Contingency Coefficient               0.2971
+                                 Cramer's V                           -0.3111
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                           11
+                                 Left-sided Pr <= F                             0.0527
+                                 Right-sided Pr >= F                            0.9907
+
+                                 Table Probability (P)                          0.0435
+                                 Two-sided Pr <= P                              0.0775
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026    13
+
+                                                   The FREQ Procedure
+
+                                               Table of Q33_4 by PPGENDER
+
+                                          Q33_4     PPGENDER
+
+                                          Frequency|
+                                          Row Pct  |       1|       2|  Total
+                                          ---------+--------+--------+
+                                                 0 |     13 |     11 |     24
+                                                   |  54.17 |  45.83 |
+                                          ---------+--------+--------+
+                                                 1 |      6 |     10 |     16
+                                                   |  37.50 |  62.50 |
+                                          ---------+--------+--------+
+                                          Total          19       21       40
+
+                                       Statistics for Table of Q33_4 by PPGENDER
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1      1.0693    0.3011
+                                 Likelihood Ratio Chi-Square    1      1.0775    0.2993
+                                 Continuity Adj. Chi-Square     1      0.5054    0.4771
+                                 Mantel-Haenszel Chi-Square     1      1.0426    0.3072
+                                 Phi Coefficient                       0.1635
+                                 Contingency Coefficient               0.1614
+                                 Cramer's V                            0.1635
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                           13
+                                 Left-sided Pr <= F                             0.9131
+                                 Right-sided Pr >= F                            0.2391
+
+                                 Table Probability (P)                          0.1523
+                                 Two-sided Pr <= P                              0.3487
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026    14
+
+                                                   The FREQ Procedure
+
+                                               Table of Q33_5 by PPGENDER
+
+                                          Q33_5     PPGENDER
+
+                                          Frequency|
+                                          Row Pct  |       1|       2|  Total
+                                          ---------+--------+--------+
+                                                 0 |     12 |     13 |     25
+                                                   |  48.00 |  52.00 |
+                                          ---------+--------+--------+
+                                                 1 |      7 |      8 |     15
+                                                   |  46.67 |  53.33 |
+                                          ---------+--------+--------+
+                                          Total          19       21       40
+
+                                       Statistics for Table of Q33_5 by PPGENDER
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1      0.0067    0.9348
+                                 Likelihood Ratio Chi-Square    1      0.0067    0.9348
+                                 Continuity Adj. Chi-Square     1      0.0000    1.0000
+                                 Mantel-Haenszel Chi-Square     1      0.0065    0.9357
+                                 Phi Coefficient                       0.0129
+                                 Contingency Coefficient               0.0129
+                                 Cramer's V                            0.0129
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                           12
+                                 Left-sided Pr <= F                             0.6578
+                                 Right-sided Pr >= F                            0.5971
+
+                                 Table Probability (P)                          0.2549
+                                 Two-sided Pr <= P                              1.0000
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026    15
+
+                                                   The FREQ Procedure
+
+                                               Table of Q33_6 by PPGENDER
+
+                                          Q33_6     PPGENDER
+
+                                          Frequency|
+                                          Row Pct  |       1|       2|  Total
+                                          ---------+--------+--------+
+                                                 0 |      9 |     15 |     24
+                                                   |  37.50 |  62.50 |
+                                          ---------+--------+--------+
+                                                 1 |     10 |      6 |     16
+                                                   |  62.50 |  37.50 |
+                                          ---------+--------+--------+
+                                          Total          19       21       40
+
+                                       Statistics for Table of Q33_6 by PPGENDER
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1      2.4060    0.1209
+                                 Likelihood Ratio Chi-Square    1      2.4267    0.1193
+                                 Continuity Adj. Chi-Square     1      1.5079    0.2195
+                                 Mantel-Haenszel Chi-Square     1      2.3459    0.1256
+                                 Phi Coefficient                      -0.2453
+                                 Contingency Coefficient               0.2382
+                                 Cramer's V                           -0.2453
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                            9
+                                 Left-sided Pr <= F                             0.1096
+                                 Right-sided Pr >= F                            0.9701
+
+                                 Table Probability (P)                          0.0798
+                                 Two-sided Pr <= P                              0.1965
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026    16
+
+                                                   The FREQ Procedure
+
+                                               Table of Q33_7 by PPGENDER
+
+                                          Q33_7     PPGENDER
+
+                                          Frequency|
+                                          Row Pct  |       1|       2|  Total
+                                          ---------+--------+--------+
+                                                 0 |     11 |     13 |     24
+                                                   |  45.83 |  54.17 |
+                                          ---------+--------+--------+
+                                                 1 |      8 |      8 |     16
+                                                   |  50.00 |  50.00 |
+                                          ---------+--------+--------+
+                                          Total          19       21       40
+
+                                       Statistics for Table of Q33_7 by PPGENDER
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1      0.0668    0.7960
+                                 Likelihood Ratio Chi-Square    1      0.0668    0.7960
+                                 Continuity Adj. Chi-Square     1      0.0000    1.0000
+                                 Mantel-Haenszel Chi-Square     1      0.0652    0.7985
+                                 Phi Coefficient                      -0.0409
+                                 Contingency Coefficient               0.0408
+                                 Cramer's V                           -0.0409
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                           11
+                                 Left-sided Pr <= F                             0.5252
+                                 Right-sided Pr >= F                            0.7195
+
+                                 Table Probability (P)                          0.2447
+                                 Two-sided Pr <= P                              1.0000
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026    17
+
+                                                   The FREQ Procedure
+
+                                              Table of Agediff by PPGENDER
+
+                                          Agediff     PPGENDER
+
+                                          Frequency|
+                                          Row Pct  |       1|       2|  Total
+                                          ---------+--------+--------+
+                                                 0 |      8 |      7 |     15
+                                                   |  53.33 |  46.67 |
+                                          ---------+--------+--------+
+                                                 1 |     11 |     14 |     25
+                                                   |  44.00 |  56.00 |
+                                          ---------+--------+--------+
+                                          Total          19       21       40
+
+                                      Statistics for Table of Agediff by PPGENDER
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1      0.3275    0.5671
+                                 Likelihood Ratio Chi-Square    1      0.3275    0.5671
+                                 Continuity Adj. Chi-Square     1      0.0602    0.8063
+                                 Mantel-Haenszel Chi-Square     1      0.3193    0.5720
+                                 Phi Coefficient                       0.0905
+                                 Contingency Coefficient               0.0901
+                                 Cramer's V                            0.0905
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                            8
+                                 Left-sided Pr <= F                             0.8156
+                                 Right-sided Pr >= F                            0.4029
+
+                                 Table Probability (P)                          0.2185
+                                 Two-sided Pr <= P                              0.7451
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026    18
+
+                                                                 Row
+        Obs    varlable               PPGENDER    Frequency    Percent            Prob    category
+
+          1    Work                       1            8        53.33           0.5671    1. Where Met Partner:
+          2    Work                       2            7        46.67           0.5671    1. Where Met Partner:
+          3    School                     1            5        35.71           0.2734    1. Where Met Partner:
+          4    School                     2            9        64.29           0.2734    1. Where Met Partner:
+          5    Church                     1            6        42.86           0.6661    1. Where Met Partner:
+          6    Church                     2            8        57.14           0.6661    1. Where Met Partner:
+          7    Dating Services            1            7        43.75           0.6982    1. Where Met Partner:
+          8    Dating Services            2            9        56.25           0.6982    1. Where Met Partner:
+          9    Vacation                   1            4        33.33           0.2402    1. Where Met Partner:
+         10    Vacation                   2            8        66.67           0.2402    1. Where Met Partner:
+         11    Bar                        1            4        50.00           0.8742    1. Where Met Partner:
+         12    Bar                        2            4        50.00           0.8742    1. Where Met Partner:
+         13    Social Organization        1           12        80.00           0.0014    1. Where Met Partner:
+         14    Social Organization        2            3        20.00           0.0014    1. Where Met Partner:
+         15    Private Party              1            6        46.15           0.9058    1. Where Met Partner:
+         16    Private Party              2            7        53.85           0.9058    1. Where Met Partner:
+         17    Other                      1            5        45.45           0.8732    1. Where Met Partner:
+         18    Other                      2            6        54.55           0.8732    1. Where Met Partner:
+         19    Family                     1            6        60.00           0.3607    2. Who Introduced Part
+         20    Family                     2            4        40.00           0.3607    2. Who Introduced Part
+         21    Mutural Friends            1            5        27.78           0.0239
+         22    Mutural Friends            2           13        72.22           0.0239
+         23    Co-workers                 1            8        72.73           0.0491
+         24    Co-workers                 2            3        27.27           0.0491
+         25    Classmates                 1            6        37.50           0.3011    2. Who Introduced Part
+         26    Classmates                 2           10        62.50           0.3011    2. Who Introduced Part
+         27    Neighbors                  1            7        46.67           0.9348    2. Who Introduced Part
+         28    Neighbors                  2            8        53.33           0.9348    2. Who Introduced Part
+         29    Self or Partner            1           10        62.50           0.1209    2. Who Introduced Part
+         30    Self or Partner            2            6        37.50           0.1209    2. Who Introduced Part
+         31    Other2                     1            8        50.00           0.7960    2. Who Introduced Part
+         32    Other2                     2            8        50.00           0.7960    2. Who Introduced Part
+         33    Age                        1           11        44.00           0.5671    3. Similar Age:
+         34    Age                        2           14        56.00           0.5671    3. Similar Age:
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026    19
+
+                     -----------------------------------------------------------------------------
+                     |                            |             PPGENDER              |   All    |
+                     |                            |-----------------------------------+----------|
+                     |                            |      Male       |     Female      |   Prob   |
+                     |                            |-----------------+-----------------+----------|
+                     |                            |   N    |   %    |   N    |   %    |   Mean   |
+                     |----------------------------+--------+--------+--------+--------+----------|
+                     |category     |              |        |        |        |        |          |
+                     |-------------+--------------|        |        |        |        |          |
+                     |1. Where Met |Bar           |       4|   50.00|       4|   50.00|    0.8742|
+                     |Partner:     |--------------+--------+--------+--------+--------+----------|
+                     |             |Church        |       6|   42.86|       8|   57.14|    0.6661|
+                     |             |--------------+--------+--------+--------+--------+----------|
+                     |             |Dating        |        |        |        |        |          |
+                     |             |Services      |       7|   43.75|       9|   56.25|    0.6982|
+                     |             |--------------+--------+--------+--------+--------+----------|
+                     |             |Other         |       5|   45.45|       6|   54.55|    0.8732|
+                     |             |--------------+--------+--------+--------+--------+----------|
+                     |             |Private Party |       6|   46.15|       7|   53.85|    0.9058|
+                     |             |--------------+--------+--------+--------+--------+----------|
+                     |             |School        |       5|   35.71|       9|   64.29|    0.2734|
+                     |             |--------------+--------+--------+--------+--------+----------|
+                     |             |Social        |        |        |        |        |          |
+                     |             |Organization  |      12|   80.00|       3|   20.00|    0.0014|
+                     |             |--------------+--------+--------+--------+--------+----------|
+                     |             |Vacation      |       4|   33.33|       8|   66.67|    0.2402|
+                     |             |--------------+--------+--------+--------+--------+----------|
+                     |             |Work          |       8|   53.33|       7|   46.67|    0.5671|
+                     |-------------+--------------+--------+--------+--------+--------+----------|
+                     |2. Who       |Classmates    |       6|   37.50|      10|   62.50|    0.3011|
+                     |Introduced   |--------------+--------+--------+--------+--------+----------|
+                     |Part         |Family        |       6|   60.00|       4|   40.00|    0.3607|
+                     |             |--------------+--------+--------+--------+--------+----------|
+                     |             |Neighbors     |       7|   46.67|       8|   53.33|    0.9348|
+                     |             |--------------+--------+--------+--------+--------+----------|
+                     |             |Other2        |       8|   50.00|       8|   50.00|    0.7960|
+                     |             |--------------+--------+--------+--------+--------+----------|
+                     |             |Self or       |        |        |        |        |          |
+                     |             |Partner       |      10|   62.50|       6|   37.50|    0.1209|
+                     |-------------+--------------+--------+--------+--------+--------+----------|
+                     |3. Similar   |Age           |      11|   44.00|      14|   56.00|    0.5671|
+                     |Age:         |              |        |        |        |        |          |
+                     -----------------------------------------------------------------------------
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026    20
+
+                                                   The FREQ Procedure
+
+                                         Table of Q31_1 by Excellent_Indicator
+
+                                          Q31_1     Excellent_Indicator
+
+                                          Frequency|
+                                          Row Pct  |       0|       1|  Total
+                                          ---------+--------+--------+
+                                                 0 |     17 |      8 |     25
+                                                   |  68.00 |  32.00 |
+                                          ---------+--------+--------+
+                                                 1 |     11 |      4 |     15
+                                                   |  73.33 |  26.67 |
+                                          ---------+--------+--------+
+                                          Total          28       12       40
+
+                                  Statistics for Table of Q31_1 by Excellent_Indicator
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1      0.1270    0.7216
+                                 Likelihood Ratio Chi-Square    1      0.1282    0.7203
+                                 Continuity Adj. Chi-Square     1      0.0000    1.0000
+                                 Mantel-Haenszel Chi-Square     1      0.1238    0.7249
+                                 Phi Coefficient                      -0.0563
+                                 Contingency Coefficient               0.0563
+                                 Cramer's V                           -0.0563
+
+            WARNING: 25% of the cells have expected counts less than 5. Chi-Square may not be a valid test.
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                           17
+                                 Left-sided Pr <= F                             0.5050
+                                 Right-sided Pr >= F                            0.7593
+
+                                 Table Probability (P)                          0.2643
+                                 Two-sided Pr <= P                              1.0000
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026    21
+
+                                                   The FREQ Procedure
+
+                                         Table of Q31_2 by Excellent_Indicator
+
+                                          Q31_2     Excellent_Indicator
+
+                                          Frequency|
+                                          Row Pct  |       0|       1|  Total
+                                          ---------+--------+--------+
+                                                 0 |     20 |      6 |     26
+                                                   |  76.92 |  23.08 |
+                                          ---------+--------+--------+
+                                                 1 |      8 |      6 |     14
+                                                   |  57.14 |  42.86 |
+                                          ---------+--------+--------+
+                                          Total          28       12       40
+
+                                  Statistics for Table of Q31_2 by Excellent_Indicator
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1      1.6954    0.1929
+                                 Likelihood Ratio Chi-Square    1      1.6571    0.1980
+                                 Continuity Adj. Chi-Square     1      0.8844    0.3470
+                                 Mantel-Haenszel Chi-Square     1      1.6531    0.1985
+                                 Phi Coefficient                       0.2059
+                                 Contingency Coefficient               0.2016
+                                 Cramer's V                            0.2059
+
+            WARNING: 25% of the cells have expected counts less than 5. Chi-Square may not be a valid test.
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                           20
+                                 Left-sided Pr <= F                             0.9506
+                                 Right-sided Pr >= F                            0.1732
+
+                                 Table Probability (P)                          0.1238
+                                 Two-sided Pr <= P                              0.2808
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026    22
+
+                                                   The FREQ Procedure
+
+                                         Table of Q31_3 by Excellent_Indicator
+
+                                          Q31_3     Excellent_Indicator
+
+                                          Frequency|
+                                          Row Pct  |       0|       1|  Total
+                                          ---------+--------+--------+
+                                                 0 |     17 |      9 |     26
+                                                   |  65.38 |  34.62 |
+                                          ---------+--------+--------+
+                                                 1 |     11 |      3 |     14
+                                                   |  78.57 |  21.43 |
+                                          ---------+--------+--------+
+                                          Total          28       12       40
+
+                                  Statistics for Table of Q31_3 by Excellent_Indicator
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1      0.7535    0.3854
+                                 Likelihood Ratio Chi-Square    1      0.7792    0.3774
+                                 Continuity Adj. Chi-Square     1      0.2564    0.6126
+                                 Mantel-Haenszel Chi-Square     1      0.7347    0.3914
+                                 Phi Coefficient                      -0.1373
+                                 Contingency Coefficient               0.1360
+                                 Cramer's V                           -0.1373
+
+            WARNING: 25% of the cells have expected counts less than 5. Chi-Square may not be a valid test.
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                           17
+                                 Left-sided Pr <= F                             0.3112
+                                 Right-sided Pr >= F                            0.8924
+
+                                 Table Probability (P)                          0.2036
+                                 Two-sided Pr <= P                              0.4844
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026    23
+
+                                                   The FREQ Procedure
+
+                                         Table of Q31_4 by Excellent_Indicator
+
+                                          Q31_4     Excellent_Indicator
+
+                                          Frequency|
+                                          Row Pct  |       0|       1|  Total
+                                          ---------+--------+--------+
+                                                 0 |     15 |      9 |     24
+                                                   |  62.50 |  37.50 |
+                                          ---------+--------+--------+
+                                                 1 |     13 |      3 |     16
+                                                   |  81.25 |  18.75 |
+                                          ---------+--------+--------+
+                                          Total          28       12       40
+
+                                  Statistics for Table of Q31_4 by Excellent_Indicator
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1      1.6071    0.2049
+                                 Likelihood Ratio Chi-Square    1      1.6716    0.1960
+                                 Continuity Adj. Chi-Square     1      0.8383    0.3599
+                                 Mantel-Haenszel Chi-Square     1      1.5670    0.2106
+                                 Phi Coefficient                      -0.2004
+                                 Contingency Coefficient               0.1965
+                                 Cramer's V                           -0.2004
+
+            WARNING: 25% of the cells have expected counts less than 5. Chi-Square may not be a valid test.
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                           15
+                                 Left-sided Pr <= F                             0.1808
+                                 Right-sided Pr >= F                            0.9502
+
+                                 Table Probability (P)                          0.1311
+                                 Two-sided Pr <= P                              0.2969
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026    24
+
+                                                   The FREQ Procedure
+
+                                         Table of Q31_5 by Excellent_Indicator
+
+                                          Q31_5     Excellent_Indicator
+
+                                          Frequency|
+                                          Row Pct  |       0|       1|  Total
+                                          ---------+--------+--------+
+                                                 0 |     20 |      8 |     28
+                                                   |  71.43 |  28.57 |
+                                          ---------+--------+--------+
+                                                 1 |      8 |      4 |     12
+                                                   |  66.67 |  33.33 |
+                                          ---------+--------+--------+
+                                          Total          28       12       40
+
+                                  Statistics for Table of Q31_5 by Excellent_Indicator
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1      0.0907    0.7633
+                                 Likelihood Ratio Chi-Square    1      0.0897    0.7645
+                                 Continuity Adj. Chi-Square     1      0.0000    1.0000
+                                 Mantel-Haenszel Chi-Square     1      0.0884    0.7662
+                                 Phi Coefficient                       0.0476
+                                 Contingency Coefficient               0.0476
+                                 Cramer's V                            0.0476
+
+            WARNING: 25% of the cells have expected counts less than 5. Chi-Square may not be a valid test.
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                           20
+                                 Left-sided Pr <= F                             0.7540
+                                 Right-sided Pr >= F                            0.5214
+
+                                 Table Probability (P)                          0.2754
+                                 Two-sided Pr <= P                              1.0000
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026    25
+
+                                                   The FREQ Procedure
+
+                                         Table of Q31_6 by Excellent_Indicator
+
+                                          Q31_6     Excellent_Indicator
+
+                                          Frequency|
+                                          Row Pct  |       0|       1|  Total
+                                          ---------+--------+--------+
+                                                 0 |     22 |     10 |     32
+                                                   |  68.75 |  31.25 |
+                                          ---------+--------+--------+
+                                                 1 |      6 |      2 |      8
+                                                   |  75.00 |  25.00 |
+                                          ---------+--------+--------+
+                                          Total          28       12       40
+
+                                  Statistics for Table of Q31_6 by Excellent_Indicator
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1      0.1190    0.7301
+                                 Likelihood Ratio Chi-Square    1      0.1223    0.7266
+                                 Continuity Adj. Chi-Square     1      0.0000    1.0000
+                                 Mantel-Haenszel Chi-Square     1      0.1161    0.7333
+                                 Phi Coefficient                      -0.0546
+                                 Contingency Coefficient               0.0545
+                                 Cramer's V                           -0.0546
+
+            WARNING: 25% of the cells have expected counts less than 5. Chi-Square may not be a valid test.
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                           22
+                                 Left-sided Pr <= F                             0.5485
+                                 Right-sided Pr >= F                            0.7748
+
+                                 Table Probability (P)                          0.3233
+                                 Two-sided Pr <= P                              1.0000
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026    26
+
+                                                   The FREQ Procedure
+
+                                         Table of Q31_7 by Excellent_Indicator
+
+                                          Q31_7     Excellent_Indicator
+
+                                          Frequency|
+                                          Row Pct  |       0|       1|  Total
+                                          ---------+--------+--------+
+                                                 0 |     19 |      6 |     25
+                                                   |  76.00 |  24.00 |
+                                          ---------+--------+--------+
+                                                 1 |      9 |      6 |     15
+                                                   |  60.00 |  40.00 |
+                                          ---------+--------+--------+
+                                          Total          28       12       40
+
+                                  Statistics for Table of Q31_7 by Excellent_Indicator
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1      1.1429    0.2850
+                                 Likelihood Ratio Chi-Square    1      1.1248    0.2889
+                                 Continuity Adj. Chi-Square     1      0.5079    0.4760
+                                 Mantel-Haenszel Chi-Square     1      1.1143    0.2912
+                                 Phi Coefficient                       0.1690
+                                 Contingency Coefficient               0.1667
+                                 Cramer's V                            0.1690
+
+            WARNING: 25% of the cells have expected counts less than 5. Chi-Square may not be a valid test.
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                           19
+                                 Left-sided Pr <= F                             0.9220
+                                 Right-sided Pr >= F                            0.2366
+
+                                 Table Probability (P)                          0.1587
+                                 Two-sided Pr <= P                              0.3110
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026    27
+
+                                                   The FREQ Procedure
+
+                                         Table of Q31_8 by Excellent_Indicator
+
+                                          Q31_8     Excellent_Indicator
+
+                                          Frequency|
+                                          Row Pct  |       0|       1|  Total
+                                          ---------+--------+--------+
+                                                 0 |     20 |      7 |     27
+                                                   |  74.07 |  25.93 |
+                                          ---------+--------+--------+
+                                                 1 |      8 |      5 |     13
+                                                   |  61.54 |  38.46 |
+                                          ---------+--------+--------+
+                                          Total          28       12       40
+
+                                  Statistics for Table of Q31_8 by Excellent_Indicator
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1      0.6566    0.4178
+                                 Likelihood Ratio Chi-Square    1      0.6427    0.4227
+                                 Continuity Adj. Chi-Square     1      0.1954    0.6585
+                                 Mantel-Haenszel Chi-Square     1      0.6402    0.4236
+                                 Phi Coefficient                       0.1281
+                                 Contingency Coefficient               0.1271
+                                 Cramer's V                            0.1281
+
+            WARNING: 25% of the cells have expected counts less than 5. Chi-Square may not be a valid test.
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                           20
+                                 Left-sided Pr <= F                             0.8798
+                                 Right-sided Pr >= F                            0.3247
+
+                                 Table Probability (P)                          0.2046
+                                 Two-sided Pr <= P                              0.4760
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026    28
+
+                                                   The FREQ Procedure
+
+                                         Table of Q31_9 by Excellent_Indicator
+
+                                          Q31_9     Excellent_Indicator
+
+                                          Frequency|
+                                          Row Pct  |       0|       1|  Total
+                                          ---------+--------+--------+
+                                                 0 |     25 |      4 |     29
+                                                   |  86.21 |  13.79 |
+                                          ---------+--------+--------+
+                                                 1 |      3 |      8 |     11
+                                                   |  27.27 |  72.73 |
+                                          ---------+--------+--------+
+                                          Total          28       12       40
+
+                                  Statistics for Table of Q31_9 by Excellent_Indicator
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1     13.1900    0.0003
+                                 Likelihood Ratio Chi-Square    1     12.7092    0.0004
+                                 Continuity Adj. Chi-Square     1     10.5329    0.0012
+                                 Mantel-Haenszel Chi-Square     1     12.8603    0.0003
+                                 Phi Coefficient                       0.5742
+                                 Contingency Coefficient               0.4980
+                                 Cramer's V                            0.5742
+
+            WARNING: 25% of the cells have expected counts less than 5. Chi-Square may not be a valid test.
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                           25
+                                 Left-sided Pr <= F                             1.0000
+                                 Right-sided Pr >= F                            0.0007
+
+                                 Table Probability (P)                          0.0007
+                                 Two-sided Pr <= P                              0.0007
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026    29
+
+                                                   The FREQ Procedure
+
+                                         Table of Q33_1 by Excellent_Indicator
+
+                                          Q33_1     Excellent_Indicator
+
+                                          Frequency|
+                                          Row Pct  |       0|       1|  Total
+                                          ---------+--------+--------+
+                                                 0 |     23 |      7 |     30
+                                                   |  76.67 |  23.33 |
+                                          ---------+--------+--------+
+                                                 1 |      5 |      5 |     10
+                                                   |  50.00 |  50.00 |
+                                          ---------+--------+--------+
+                                          Total          28       12       40
+
+                                  Statistics for Table of Q33_1 by Excellent_Indicator
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1      2.5397    0.1110
+                                 Likelihood Ratio Chi-Square    1      2.4098    0.1206
+                                 Continuity Adj. Chi-Square     1      1.4286    0.2320
+                                 Mantel-Haenszel Chi-Square     1      2.4762    0.1156
+                                 Phi Coefficient                       0.2520
+                                 Contingency Coefficient               0.2443
+                                 Cramer's V                            0.2520
+
+            WARNING: 25% of the cells have expected counts less than 5. Chi-Square may not be a valid test.
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                           23
+                                 Left-sided Pr <= F                             0.9744
+                                 Right-sided Pr >= F                            0.1174
+
+                                 Table Probability (P)                          0.0918
+                                 Two-sided Pr <= P                              0.1329
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026    30
+
+                                                   The FREQ Procedure
+
+                                         Table of Q33_2 by Excellent_Indicator
+
+                                          Q33_2     Excellent_Indicator
+
+                                          Frequency|
+                                          Row Pct  |       0|       1|  Total
+                                          ---------+--------+--------+
+                                                 0 |     15 |      7 |     22
+                                                   |  68.18 |  31.82 |
+                                          ---------+--------+--------+
+                                                 1 |     13 |      5 |     18
+                                                   |  72.22 |  27.78 |
+                                          ---------+--------+--------+
+                                          Total          28       12       40
+
+                                  Statistics for Table of Q33_2 by Excellent_Indicator
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1      0.0770    0.7815
+                                 Likelihood Ratio Chi-Square    1      0.0772    0.7811
+                                 Continuity Adj. Chi-Square     1      0.0000    1.0000
+                                 Mantel-Haenszel Chi-Square     1      0.0750    0.7841
+                                 Phi Coefficient                      -0.0439
+                                 Contingency Coefficient               0.0438
+                                 Cramer's V                           -0.0439
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                           15
+                                 Left-sided Pr <= F                             0.5294
+                                 Right-sided Pr >= F                            0.7321
+
+                                 Table Probability (P)                          0.2615
+                                 Two-sided Pr <= P                              1.0000
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026    31
+
+                                                   The FREQ Procedure
+
+                                         Table of Q33_3 by Excellent_Indicator
+
+                                          Q33_3     Excellent_Indicator
+
+                                          Frequency|
+                                          Row Pct  |       0|       1|  Total
+                                          ---------+--------+--------+
+                                                 0 |     22 |      7 |     29
+                                                   |  75.86 |  24.14 |
+                                          ---------+--------+--------+
+                                                 1 |      6 |      5 |     11
+                                                   |  54.55 |  45.45 |
+                                          ---------+--------+--------+
+                                          Total          28       12       40
+
+                                  Statistics for Table of Q33_3 by Excellent_Indicator
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1      1.7256    0.1890
+                                 Likelihood Ratio Chi-Square    1      1.6564    0.1981
+                                 Continuity Adj. Chi-Square     1      0.8598    0.3538
+                                 Mantel-Haenszel Chi-Square     1      1.6825    0.1946
+                                 Phi Coefficient                       0.2077
+                                 Contingency Coefficient               0.2034
+                                 Cramer's V                            0.2077
+
+            WARNING: 25% of the cells have expected counts less than 5. Chi-Square may not be a valid test.
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                           22
+                                 Left-sided Pr <= F                             0.9530
+                                 Right-sided Pr >= F                            0.1761
+
+                                 Table Probability (P)                          0.1291
+                                 Two-sided Pr <= P                              0.2535
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026    32
+
+                                                   The FREQ Procedure
+
+                                         Table of Q33_4 by Excellent_Indicator
+
+                                          Q33_4     Excellent_Indicator
+
+                                          Frequency|
+                                          Row Pct  |       0|       1|  Total
+                                          ---------+--------+--------+
+                                                 0 |     17 |      7 |     24
+                                                   |  70.83 |  29.17 |
+                                          ---------+--------+--------+
+                                                 1 |     11 |      5 |     16
+                                                   |  68.75 |  31.25 |
+                                          ---------+--------+--------+
+                                          Total          28       12       40
+
+                                  Statistics for Table of Q33_4 by Excellent_Indicator
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1      0.0198    0.8880
+                                 Likelihood Ratio Chi-Square    1      0.0198    0.8881
+                                 Continuity Adj. Chi-Square     1      0.0000    1.0000
+                                 Mantel-Haenszel Chi-Square     1      0.0193    0.8894
+                                 Phi Coefficient                       0.0223
+                                 Contingency Coefficient               0.0223
+                                 Cramer's V                            0.0223
+
+            WARNING: 25% of the cells have expected counts less than 5. Chi-Square may not be a valid test.
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                           17
+                                 Left-sided Pr <= F                             0.6910
+                                 Right-sided Pr >= F                            0.5796
+
+                                 Table Probability (P)                          0.2706
+                                 Two-sided Pr <= P                              1.0000
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026    33
+
+                                                   The FREQ Procedure
+
+                                         Table of Q33_5 by Excellent_Indicator
+
+                                          Q33_5     Excellent_Indicator
+
+                                          Frequency|
+                                          Row Pct  |       0|       1|  Total
+                                          ---------+--------+--------+
+                                                 0 |     15 |     10 |     25
+                                                   |  60.00 |  40.00 |
+                                          ---------+--------+--------+
+                                                 1 |     13 |      2 |     15
+                                                   |  86.67 |  13.33 |
+                                          ---------+--------+--------+
+                                          Total          28       12       40
+
+                                  Statistics for Table of Q33_5 by Excellent_Indicator
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1      3.1746    0.0748
+                                 Likelihood Ratio Chi-Square    1      3.4383    0.0637
+                                 Continuity Adj. Chi-Square     1      2.0317    0.1540
+                                 Mantel-Haenszel Chi-Square     1      3.0952    0.0785
+                                 Phi Coefficient                      -0.2817
+                                 Contingency Coefficient               0.2712
+                                 Cramer's V                           -0.2817
+
+            WARNING: 25% of the cells have expected counts less than 5. Chi-Square may not be a valid test.
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                           15
+                                 Left-sided Pr <= F                             0.0743
+                                 Right-sided Pr >= F                            0.9871
+
+                                 Table Probability (P)                          0.0614
+                                 Two-sided Pr <= P                              0.1523
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026    34
+
+                                                   The FREQ Procedure
+
+                                         Table of Q33_6 by Excellent_Indicator
+
+                                          Q33_6     Excellent_Indicator
+
+                                          Frequency|
+                                          Row Pct  |       0|       1|  Total
+                                          ---------+--------+--------+
+                                                 0 |     18 |      6 |     24
+                                                   |  75.00 |  25.00 |
+                                          ---------+--------+--------+
+                                                 1 |     10 |      6 |     16
+                                                   |  62.50 |  37.50 |
+                                          ---------+--------+--------+
+                                          Total          28       12       40
+
+                                  Statistics for Table of Q33_6 by Excellent_Indicator
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1      0.7143    0.3980
+                                 Likelihood Ratio Chi-Square    1      0.7070    0.4004
+                                 Continuity Adj. Chi-Square     1      0.2431    0.6220
+                                 Mantel-Haenszel Chi-Square     1      0.6964    0.4040
+                                 Phi Coefficient                       0.1336
+                                 Contingency Coefficient               0.1325
+                                 Cramer's V                            0.1336
+
+            WARNING: 25% of the cells have expected counts less than 5. Chi-Square may not be a valid test.
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                           18
+                                 Left-sided Pr <= F                             0.8839
+                                 Right-sided Pr >= F                            0.3090
+
+                                 Table Probability (P)                          0.1929
+                                 Two-sided Pr <= P                              0.4898
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026    35
+
+                                                   The FREQ Procedure
+
+                                         Table of Q33_7 by Excellent_Indicator
+
+                                          Q33_7     Excellent_Indicator
+
+                                          Frequency|
+                                          Row Pct  |       0|       1|  Total
+                                          ---------+--------+--------+
+                                                 0 |     17 |      7 |     24
+                                                   |  70.83 |  29.17 |
+                                          ---------+--------+--------+
+                                                 1 |     11 |      5 |     16
+                                                   |  68.75 |  31.25 |
+                                          ---------+--------+--------+
+                                          Total          28       12       40
+
+                                  Statistics for Table of Q33_7 by Excellent_Indicator
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1      0.0198    0.8880
+                                 Likelihood Ratio Chi-Square    1      0.0198    0.8881
+                                 Continuity Adj. Chi-Square     1      0.0000    1.0000
+                                 Mantel-Haenszel Chi-Square     1      0.0193    0.8894
+                                 Phi Coefficient                       0.0223
+                                 Contingency Coefficient               0.0223
+                                 Cramer's V                            0.0223
+
+            WARNING: 25% of the cells have expected counts less than 5. Chi-Square may not be a valid test.
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                           17
+                                 Left-sided Pr <= F                             0.6910
+                                 Right-sided Pr >= F                            0.5796
+
+                                 Table Probability (P)                          0.2706
+                                 Two-sided Pr <= P                              1.0000
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026    36
+
+                                                   The FREQ Procedure
+
+                                        Table of Agediff by Excellent_Indicator
+
+                                          Agediff     Excellent_Indicator
+
+                                          Frequency|
+                                          Row Pct  |       0|       1|  Total
+                                          ---------+--------+--------+
+                                                 0 |     11 |      4 |     15
+                                                   |  73.33 |  26.67 |
+                                          ---------+--------+--------+
+                                                 1 |     17 |      8 |     25
+                                                   |  68.00 |  32.00 |
+                                          ---------+--------+--------+
+                                          Total          28       12       40
+
+                                 Statistics for Table of Agediff by Excellent_Indicator
+
+                                 Statistic                     DF       Value      Prob
+                                 ------------------------------------------------------
+                                 Chi-Square                     1      0.1270    0.7216
+                                 Likelihood Ratio Chi-Square    1      0.1282    0.7203
+                                 Continuity Adj. Chi-Square     1      0.0000    1.0000
+                                 Mantel-Haenszel Chi-Square     1      0.1238    0.7249
+                                 Phi Coefficient                       0.0563
+                                 Contingency Coefficient               0.0563
+                                 Cramer's V                            0.0563
+
+            WARNING: 25% of the cells have expected counts less than 5. Chi-Square may not be a valid test.
+
+                                 Fisher's Exact Test
+                                 ----------------------------------
+                                 Cell (1,1) Frequency (F)                           11
+                                 Left-sided Pr <= F                             0.7593
+                                 Right-sided Pr >= F                            0.5050
+
+                                 Table Probability (P)                          0.2643
+                                 Two-sided Pr <= P                              1.0000
+
+                                                    Sample Size = 40
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026    37
+
+                                     Excellent_                   Row
+       Obs    varlable                Indicator    Frequency    Percent            Prob    category
+
+         1    Work                        0            11        73.33           0.7216    1. Where Met Partner:
+         2    Work                        1             4        26.67           0.7216    1. Where Met Partner:
+         3    School                      0             8        57.14           0.1929    1. Where Met Partner:
+         4    School                      1             6        42.86           0.1929    1. Where Met Partner:
+         5    Church                      0            11        78.57           0.3854    1. Where Met Partner:
+         6    Church                      1             3        21.43           0.3854    1. Where Met Partner:
+         7    Dating Services             0            13        81.25           0.2049    1. Where Met Partner:
+         8    Dating Services             1             3        18.75           0.2049    1. Where Met Partner:
+         9    Vacation                    0             8        66.67           0.7633    1. Where Met Partner:
+        10    Vacation                    1             4        33.33           0.7633    1. Where Met Partner:
+        11    Bar                         0             6        75.00           0.7301    1. Where Met Partner:
+        12    Bar                         1             2        25.00           0.7301    1. Where Met Partner:
+        13    Social Organization         0             9        60.00           0.2850    1. Where Met Partner:
+        14    Social Organization         1             6        40.00           0.2850    1. Where Met Partner:
+        15    Private Party               0             8        61.54           0.4178    1. Where Met Partner:
+        16    Private Party               1             5        38.46           0.4178    1. Where Met Partner:
+        17    Other                       0             3        27.27           0.0003    1. Where Met Partner:
+        18    Other                       1             8        72.73           0.0003    1. Where Met Partner:
+        19    Family                      0             5        50.00           0.1110    2. Who Introduced Part
+        20    Family                      1             5        50.00           0.1110    2. Who Introduced Part
+        21    Mutural Friends             0            13        72.22           0.7815
+        22    Mutural Friends             1             5        27.78           0.7815
+        23    Co-workers                  0             6        54.55           0.1890
+        24    Co-workers                  1             5        45.45           0.1890
+        25    Classmates                  0            11        68.75           0.8880    2. Who Introduced Part
+        26    Classmates                  1             5        31.25           0.8880    2. Who Introduced Part
+        27    Neighbors                   0            13        86.67           0.0748    2. Who Introduced Part
+        28    Neighbors                   1             2        13.33           0.0748    2. Who Introduced Part
+        29    Self or Partner             0            10        62.50           0.3980    2. Who Introduced Part
+        30    Self or Partner             1             6        37.50           0.3980    2. Who Introduced Part
+        31    Other2                      0            11        68.75           0.8880    2. Who Introduced Part
+        32    Other2                      1             5        31.25           0.8880    2. Who Introduced Part
+        33    Age                         0            17        68.00           0.7216    3. Similar Age:
+        34    Age                         1             8        32.00           0.7216    3. Similar Age:
+
+
+                                                   The Jenner System               16:41 Friday, November 27, 2026    38
+
+                     -----------------------------------------------------------------------------
+                     |                            |        Excellent_Indicator        |   All    |
+                     |                            |-----------------------------------+----------|
+                     |                            |  not endorsing  |    endorsing    |          |
+                     |                            |    Excellent    |    Excellent    |          |
+                     |                            |  relationship   |  relationship   |          |
+                     |                            |     quality     |     quality     |   Prob   |
+                     |                            |-----------------+-----------------+----------|
+                     |                            |   N    |   %    |   N    |   %    |   Mean   |
+                     |----------------------------+--------+--------+--------+--------+----------|
+                     |category     |              |        |        |        |        |          |
+                     |-------------+--------------|        |        |        |        |          |
+                     |1. Where Met |Bar           |       6|   75.00|       2|   25.00|    0.7301|
+                     |Partner:     |--------------+--------+--------+--------+--------+----------|
+                     |             |Church        |      11|   78.57|       3|   21.43|    0.3854|
+                     |             |--------------+--------+--------+--------+--------+----------|
+                     |             |Dating        |        |        |        |        |          |
+                     |             |Services      |      13|   81.25|       3|   18.75|    0.2049|
+                     |             |--------------+--------+--------+--------+--------+----------|
+                     |             |Other         |       3|   27.27|       8|   72.73|    0.0003|
+                     |             |--------------+--------+--------+--------+--------+----------|
+                     |             |Private Party |       8|   61.54|       5|   38.46|    0.4178|
+                     |             |--------------+--------+--------+--------+--------+----------|
+                     |             |School        |       8|   57.14|       6|   42.86|    0.1929|
+                     |             |--------------+--------+--------+--------+--------+----------|
+                     |             |Social        |        |        |        |        |          |
+                     |             |Organization  |       9|   60.00|       6|   40.00|    0.2850|
+                     |             |--------------+--------+--------+--------+--------+----------|
+                     |             |Vacation      |       8|   66.67|       4|   33.33|    0.7633|
+                     |             |--------------+--------+--------+--------+--------+----------|
+                     |             |Work          |      11|   73.33|       4|   26.67|    0.7216|
+                     |-------------+--------------+--------+--------+--------+--------+----------|
+                     |2. Who       |Classmates    |      11|   68.75|       5|   31.25|    0.8880|
+                     |Introduced   |--------------+--------+--------+--------+--------+----------|
+                     |Part         |Family        |       5|   50.00|       5|   50.00|    0.1110|
+                     |             |--------------+--------+--------+--------+--------+----------|
+                     |             |Neighbors     |      13|   86.67|       2|   13.33|    0.0748|
+                     |             |--------------+--------+--------+--------+--------+----------|
+                     |             |Other2        |      11|   68.75|       5|   31.25|    0.8880|
+                     |             |--------------+--------+--------+--------+--------+----------|
+                     |             |Self or       |        |        |        |        |          |
+                     |             |Partner       |      10|   62.50|       6|   37.50|    0.3980|
+                     |-------------+--------------+--------+--------+--------+--------+----------|
+                     |3. Similar   |Age           |      17|   68.00|       8|   32.00|    0.7216|
+                     |Age:         |              |        |        |        |        |          |
+                     -----------------------------------------------------------------------------
+

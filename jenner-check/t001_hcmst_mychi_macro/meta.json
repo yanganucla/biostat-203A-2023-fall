@@ -1,0 +1,7 @@
+{
+  "bundle": "t001_hcmst_mychi_macro",
+  "source_file": "final yang an 106332601.sas",
+  "source_blob_sha": "8f0f5380231f3ee2c708e378a5b442838993f3ad",
+  "source_commit": "7fea7ac6d22627dfbd32f58861c78e09150b65f9",
+  "notes": "Final-project script with the %MYCHI macro and its two calls. Only the LIBNAME and CaseSubset.csv paths were redirected to ./ ; the HCMST extract (not in the repo) is replaced by a 60-row mock built in autoexec.sas with the same column names, so the analysis steps run as written."
+}

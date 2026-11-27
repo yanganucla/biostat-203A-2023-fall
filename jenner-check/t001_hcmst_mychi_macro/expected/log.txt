@@ -1,0 +1,1305 @@
+1          /* cap input rows for the captured run */
+2          options obs=100;
+NOTE: Option OBS changed to 100.
+3
+4          /* mock inputs standing in for the course's private HCMST extract */
+5          data _hc;
+6            infile datalines;
+7            length RELATIONSHIP_QUALITY $1;
+8            input caseid_new PPGENDER PPAGE Q9 Q31_1-Q31_9 Q33_1-Q33_7 RELATIONSHIP_QUALITY;
+9          datalines;
+70         ;
+71         run;
+NOTE: DATA WORK._HC
+
+NOTE: Processing inline DATALINES (60 lines)
+
+NOTE: The data set WORK._HC has 60 observations and 21 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+72         data _null_;
+73           file "./CaseSubset.csv";
+74           put "caseid_new,subsetnumber";
+75           put "1,2";
+76           put "2,2";
+77           put "3,1";
+78           put "4,2";
+79           put "5,2";
+80           put "6,1";
+81           put "7,2";
+82           put "8,2";
+83           put "9,1";
+84           put "10,2";
+85           put "11,2";
+86           put "12,1";
+87           put "13,2";
+88           put "14,2";
+89           put "15,1";
+90           put "16,2";
+91           put "17,2";
+92           put "18,1";
+93           put "19,2";
+94           put "20,2";
+95           put "21,1";
+96           put "22,2";
+97           put "23,2";
+98           put "24,1";
+99           put "25,2";
+100          put "26,2";
+101          put "27,1";
+102          put "28,2";
+103          put "29,2";
+104          put "30,1";
+105          put "31,2";
+106          put "32,2";
+107          put "33,1";
+108          put "34,2";
+109          put "35,2";
+110          put "36,1";
+111          put "37,2";
+112          put "38,2";
+113          put "39,1";
+114          put "40,2";
+115          put "41,2";
+116          put "42,1";
+117          put "43,2";
+118          put "44,2";
+119          put "45,1";
+120          put "46,2";
+121          put "47,2";
+122          put "48,1";
+123          put "49,2";
+124          put "50,2";
+125          put "51,1";
+126          put "52,2";
+127          put "53,2";
+128          put "54,1";
+129          put "55,2";
+130          put "56,2";
+131          put "57,1";
+132          put "58,2";
+133          put "59,2";
+134          put "60,1";
+135          put "61,2";
+136          put "62,2";
+137          put "63,1";
+138          put "64,2";
+139          put "65,2";
+140          put "66,1";
+141          put "67,2";
+142          put "68,2";
+143          put "69,1";
+144          put "70,2";
+145        run;
+NOTE: DATA _null_
+
+NOTE: Writing to fileref ./CaseSubset.csv (/tmp/work/r_5acc4e7d0b014e85950cdf74463b5237/CaseSubset.csv)
+
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+146        data hcmst_in;
+147          set _hc;
+148        run;
+NOTE: DATA WORK.HCMST_IN
+
+
+NOTE: There were 60 observations read from the data set WORK._HC.
+NOTE: The data set WORK.HCMST_IN has 60 observations and 21 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+149        libname fin "./";
+NOTE: Library FIN assigned path=./.
+150        proc copy in=work out=fin; select hcmst_in; run;
+NOTE: PROC COPY in=work out=fin
+
+NOTE: Copying WORK.HCMST_IN to FIN.HCMST_IN (memtype=DATA).
+NOTE: There were 60 observations read from the data set WORK.HCMST_IN.
+NOTE: The data set FIN.HCMST_IN has 60 observations and 21 variables.
+151        proc datasets lib=fin nolist; change hcmst_in=hcmst; quit;
+NOTE: PROC DATASETS library=FIN
+
+NOTE: Changing the name FIN.HCMST_IN to FIN.HCMST (memtype=DATA).
+152         data casesubset;
+153           infile"./CaseSubset.csv" dsd firstobs=2;
+154           input caseid_new
+155                 subsetnumber;
+156        run;
+NOTE: DATA WORK.CASESUBSET
+
+NOTE: Reading from fileref ./CaseSubset.csv (CaseSubset.csv)
+
+NOTE: 70 records were read from the infile './CaseSubset.csv'.
+NOTE: The data set WORK.CASESUBSET has 70 observations and 2 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+157        proc sort data=casesubset; by caseid_new; run;
+NOTE: PROC SORT data=WORK.CASESUBSET
+
+NOTE: There were 70 observations read from the data set WORK.CASESUBSET.
+NOTE: The data set WORK.CASESUBSET has 70 observations and 2 variables.
+NOTE: PROC SORT statement used.
+158        proc sort data=fin.hcmst; by caseid_new; run;
+NOTE: PROC SORT data=FIN.HCMST
+
+NOTE: There were 60 observations read from the data set FIN.HCMST.
+NOTE: The data set FIN.HCMST has 60 observations and 21 variables.
+NOTE: PROC SORT statement used.
+159        data fin.my_hcmst;
+160         merge casesubset (where=(subsetnumber = 2) in=ind1)
+161               fin.hcmst (in=ind2);
+162         by caseid_new;
+163         if ind1 & ind2;
+164        run;
+NOTE: DATA FIN.MY_HCMST
+
+
+NOTE: There were 47 observations read from the data set WORK.CASESUBSET.
+      WHERE subsetnumber=2;
+NOTE: There were 60 observations read from the data set FIN.HCMST.
+NOTE: The data set FIN.MY_HCMST has 40 observations and 22 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+165          proc format ;
+166                value genformat
+167                      1 ='Male'
+168                      2 ='Female';
+169                value eiformat
+170                      0 ='not endorsing Excellent relationship quality'
+171                      1 ='endorsing Excellent relationship quality';
+172            run;
+NOTE: PROC FORMAT library=WORK
+
+NOTE: FORMAT genformat defined (2 ranges).
+NOTE: FORMAT eiformat defined (2 ranges).
+173
+174         data fin.my_hcmst;
+175         set fin.my_hcmst;
+176         if abs(PPAGE-Q9) <= 5 then Agediff = 1;
+177         else Agediff = 0;
+178        run;
+NOTE: DATA FIN.MY_HCMST
+
+
+NOTE: There were 40 observations read from the data set FIN.MY_HCMST.
+NOTE: The data set FIN.MY_HCMST has 40 observations and 23 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+179
+180        %MACRO MYCHI(varname,varlable,varformat,dataset);
+181
+182        /*work*/
+183        ods output CrossTabFreqs=CTF (where=(Q31_1=1 & RowPercent ne .))
+184                  ChiSq=CS (where=(statistic="Chi-Square"));
+185        proc freq data=fin.my_hcmst;
+186         tables Q31_1*&varname/nopercent nocol chisq;
+187        run;
+188        proc sort data=CTF; by table; run;
+189        proc sort data=CS; by table; run;
+190        data CSCTF;
+191         merge CTF CS;
+192         by table;
+193         varlable = "Work";
+194         keep varlable &varname frequency rowpercent prob;
+195        run;
+196        /*school*/
+197        ods output CrossTabFreqs=CTF (where=(Q31_2=1 & RowPercent ne .))
+198                   ChiSq=CS (where=(statistic="Chi-Square"));
+199        proc freq data=fin.my_hcmst;
+200         tables Q31_2*&varname/nopercent nocol chisq;
+201        run;
+202        proc sort data=CTF; by table; run;
+203        proc sort data=CS; by table; run;
+204        data CSCTF2;
+205         merge CTF CS;
+206         by table;
+207         varlable = "School";
+208         keep varlable &varname frequency rowpercent prob;
+209        run;
+210        /*church*/
+211        ods output CrossTabFreqs=CTF (where=(Q31_3=1 & RowPercent ne .))
+212                   ChiSq=CS (where=(statistic="Chi-Square"));
+213        proc freq data=fin.my_hcmst;
+214         tables Q31_3*&varname/nopercent nocol chisq;
+215        run;
+216        proc sort data=CTF; by table; run;
+217        proc sort data=CS; by table; run;
+218        data CSCTF3;
+219         merge CTF CS;
+220         by table;
+221         varlable = "Church";
+222         keep varlable &varname frequency rowpercent prob;
+223        run;
+224        /*Dating services*/
+225        ods output CrossTabFreqs=CTF (where=(Q31_4=1 & RowPercent ne .))
+226                   ChiSq=CS (where=(statistic="Chi-Square"));
+227        proc freq data=fin.my_hcmst;
+228         tables Q31_4*&varname/nopercent nocol chisq;
+229        run;
+230        proc sort data=CTF; by table; run;
+231        proc sort data=CS; by table; run;
+232        data CSCTF4;
+233         merge CTF CS;
+234         by table;
+235         varlable = "Dating Services";
+236         keep varlable &varname frequency rowpercent prob;
+237        run;
+238        /*vacation*/
+239        ods output CrossTabFreqs=CTF (where=(Q31_5=1 & RowPercent ne .))
+240                   ChiSq=CS (where=(statistic="Chi-Square"));
+241        proc freq data=fin.my_hcmst;
+242         tables Q31_5*&varname/nopercent nocol chisq;
+243        run;
+244        proc sort data=CTF; by table; run;
+245        proc sort data=CS; by table; run;
+246        data CSCTF5;
+247         merge CTF CS;
+248         by table;
+249         varlable = "Vacation";
+250         keep varlable &varname frequency rowpercent prob;
+251        run;
+252        /*bar*/
+253        ods output CrossTabFreqs=CTF (where=(Q31_6=1 & RowPercent ne .))
+254                   ChiSq=CS (where=(statistic="Chi-Square"));
+255        proc freq data=fin.my_hcmst;
+256         tables Q31_6*&varname/nopercent nocol chisq;
+257        run;
+258        proc sort data=CTF; by table; run;
+259        proc sort data=CS; by table; run;
+260        data CSCTF6;
+261         merge CTF CS;
+262         by table;
+263         varlable = "Bar";
+264         keep varlable &varname frequency rowpercent prob;
+265        run;
+266        /*social*/
+267        ods output CrossTabFreqs=CTF (where=(Q31_7=1 & RowPercent ne .))
+268                   ChiSq=CS (where=(statistic="Chi-Square"));
+269        proc freq data=fin.my_hcmst;
+270         tables Q31_7*&varname/nopercent nocol chisq;
+271        run;
+272        proc sort data=CTF; by table; run;
+273        proc sort data=CS; by table; run;
+274        data CSCTF7;
+275         merge CTF CS;
+276         by table;
+277         varlable = "Social Organization";
+278         keep varlable &varname frequency rowpercent prob;
+279        run;
+280        /*party*/
+281        ods output CrossTabFreqs=CTF (where=(Q31_8=1 & RowPercent ne .))
+282                   ChiSq=CS (where=(statistic="Chi-Square"));
+283        proc freq data=fin.my_hcmst;
+284         tables Q31_8*&varname/nopercent nocol chisq;
+285        run;
+286        proc sort data=CTF; by table; run;
+287        proc sort data=CS; by table; run;
+288        data CSCTF8;
+289         merge CTF CS;
+290         by table;
+291         varlable = "Private Party";
+292         keep varlable &varname frequency rowpercent prob;
+293        run;
+294        /*other*/
+295        ods output CrossTabFreqs=CTF (where=(Q31_9=1 & RowPercent ne .))
+296                   ChiSq=CS (where=(statistic="Chi-Square"));
+297        proc freq data=fin.my_hcmst;
+298         tables Q31_9*&varname/nopercent nocol chisq;
+299        run;
+300        proc sort data=CTF; by table; run;
+301        proc sort data=CS; by table; run;
+302        data CSCTF9;
+303         merge CTF CS;
+304         by table;
+305         varlable = "Other";
+306         keep varlable &varname frequency rowpercent prob;
+307        run;
+308        /*family*/
+309        ods output CrossTabFreqs=CTF (where=(Q33_1=1 & RowPercent ne .))
+310                   ChiSq=CS (where=(statistic="Chi-Square"));
+311        proc freq data=fin.my_hcmst;
+312         tables Q33_1*&varname/nopercent nocol chisq;
+313        run;
+314        proc sort data=CTF; by table; run;
+315        proc sort data=CS; by table; run;
+316        data CSCTF10;
+317         merge CTF CS;
+318         by table;
+319         varlable = "Family";
+320         keep varlable &varname frequency rowpercent prob;
+321        run;
+322        /*mutural friends*/
+323        ods output CrossTabFreqs=CTF (where=(Q33_2=1 & RowPercent ne .))
+324                   ChiSq=CS (where=(statistic="Chi-Square"));
+325        proc freq data=fin.my_hcmst;
+326         tables Q33_2*&varname/nopercent nocol chisq;
+327        run;
+328        proc sort data=CTF; by table; run;
+329        proc sort data=CS; by table; run;
+330        data CSCTF11;
+331         merge CTF CS;
+332         by table;
+333         varlable = "Mutural Friends";
+334         keep varlable &varname frequency rowpercent prob;
+335        run;
+336        /*co-workers*/
+337        ods output CrossTabFreqs=CTF (where=(Q33_3=1 & RowPercent ne .))
+338                   ChiSq=CS (where=(statistic="Chi-Square"));
+339        proc freq data=fin.my_hcmst;
+340         tables Q33_3*&varname/nopercent nocol chisq;
+341        run;
+342        proc sort data=CTF; by table; run;
+343        proc sort data=CS; by table; run;
+344        data CSCTF12;
+345         merge CTF CS;
+346         by table;
+347         varlable = "Co-workers";
+348         keep varlable &varname frequency rowpercent prob;
+349        run;
+350        /*classmates*/
+351        ods output CrossTabFreqs=CTF (where=(Q33_4=1 & RowPercent ne .))
+352                   ChiSq=CS (where=(statistic="Chi-Square"));
+353        proc freq data=fin.my_hcmst;
+354         tables Q33_4*&varname/nopercent nocol chisq;
+355        run;
+356        proc sort data=CTF; by table; run;
+357        proc sort data=CS; by table; run;
+358        data CSCTF13;
+359         merge CTF CS;
+360         by table;
+361         varlable = "Classmates";
+362         keep varlable &varname frequency rowpercent prob;
+363        run;
+364        /*Neighbors*/
+365        ods output CrossTabFreqs=CTF (where=(Q33_5=1 & RowPercent ne .))
+366                   ChiSq=CS (where=(statistic="Chi-Square"));
+367        proc freq data=fin.my_hcmst;
+368         tables Q33_5*&varname/nopercent nocol chisq;
+369        run;
+370        proc sort data=CTF; by table; run;
+371        proc sort data=CS; by table; run;
+372        data CSCTF14;
+373         merge CTF CS;
+374         by table;
+375         varlable = "Neighbors";
+376         keep varlable &varname frequency rowpercent prob;
+377        run;
+378        /*Self or Partner*/
+379        ods output CrossTabFreqs=CTF (where=(Q33_6=1 & RowPercent ne .))
+380                   ChiSq=CS (where=(statistic="Chi-Square"));
+381        proc freq data=fin.my_hcmst;
+382         tables Q33_6*&varname/nopercent nocol chisq;
+383        run;
+384        proc sort data=CTF; by table; run;
+385        proc sort data=CS; by table; run;
+386        data CSCTF15;
+387         merge CTF CS;
+388         by table;
+389         varlable = "Self or Partner";
+390         keep varlable &varname frequency rowpercent prob;
+391        run;
+392        /*Other*/
+393        ods output CrossTabFreqs=CTF (where=(Q33_7=1 & RowPercent ne .))
+394                   ChiSq=CS (where=(statistic="Chi-Square"));
+395        proc freq data=fin.my_hcmst;
+396         tables Q33_7*&varname/nopercent nocol chisq;
+397        run;
+398        proc sort data=CTF; by table; run;
+399        proc sort data=CS; by table; run;
+400        data CSCTF16;
+401         merge CTF CS;
+402         by table;
+403         varlable = "Other2";
+404         keep varlable &varname frequency rowpercent prob;
+405        run;
+406        /*Age*/
+407        ods output CrossTabFreqs=CTF (where=(Agediff=1 & RowPercent ne .))
+408                   ChiSq=CS (where=(statistic="Chi-Square"));
+409        proc freq data=fin.my_hcmst;
+410         tables Agediff*&varname/nopercent nocol chisq;
+411        run;
+412        proc sort data=CTF; by table; run;
+413        proc sort data=CS; by table; run;
+414        data CSCTF17;
+415         merge CTF CS;
+416         by table;
+417         varlable = "Age";
+418         keep varlable &varname frequency rowpercent prob;
+419        run;
+420
+421        data combined;
+422        length varlable $30.;
+423        set CSCTF CSCTF2 CSCTF3 CSCTF4 CSCTF5 CSCTF6 CSCTF7 CSCTF8 CSCTF9 CSCTF10 CSCTF11 CSCTF12 CSCTF13 CSCTF14 CSCTF15 CSCTF16 CSCTF17;
+424        if varlable in ('Bar','Church','Dating Services','Other','Private Party','School','Social Organization','Vacation','Work') then category = "1. Where Met Partner: ";
+425        else if varlable in ('Classmates','Co-Wokers','Family','Other2','Mutual Friends', 'Neighbors','Self or Partner') then category = "2. Who Introduced Partner:  ";
+426        else if varlable = 'Age' then category = "3. Similar Age: ";
+427        run;
+428        proc print data=combined(obs= 200); run;
+429        proc tabulate data=combined;
+430        class category &varname varlable;
+431        format &varname &varformat;
+432        var frequency rowpercent prob;
+433         table category*varlable="", &varname="&varlable"*(frequency="N"*f=6. rowpercent="%"*f=6.2)*sum=""
+434         ALL*prob*mean*f=10.4;
+435         run;
+436         %MEND;
+437         %MYCHI(PPGENDER, PPGENDER, genformat., fin.my_hcmst);
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF2
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF2 has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF3
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF3 has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF4
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF4 has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF5
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF5 has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF6
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF6 has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF7
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF7 has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF8
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF8 has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF9
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF9 has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF10
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF10 has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF11
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF11 has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF12
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF12 has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF13
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF13 has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF14
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF14 has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF15
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF15 has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF16
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF16 has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF17
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF17 has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA WORK.COMBINED
+
+
+NOTE: There were 2 observations read from the data set WORK.CSCTF.
+NOTE: There were 2 observations read from the data set WORK.CSCTF2.
+NOTE: There were 2 observations read from the data set WORK.CSCTF3.
+NOTE: There were 2 observations read from the data set WORK.CSCTF4.
+NOTE: There were 2 observations read from the data set WORK.CSCTF5.
+NOTE: There were 2 observations read from the data set WORK.CSCTF6.
+NOTE: There were 2 observations read from the data set WORK.CSCTF7.
+NOTE: There were 2 observations read from the data set WORK.CSCTF8.
+NOTE: There were 2 observations read from the data set WORK.CSCTF9.
+NOTE: There were 2 observations read from the data set WORK.CSCTF10.
+NOTE: There were 2 observations read from the data set WORK.CSCTF11.
+NOTE: There were 2 observations read from the data set WORK.CSCTF12.
+NOTE: There were 2 observations read from the data set WORK.CSCTF13.
+NOTE: There were 2 observations read from the data set WORK.CSCTF14.
+NOTE: There were 2 observations read from the data set WORK.CSCTF15.
+NOTE: There were 2 observations read from the data set WORK.CSCTF16.
+NOTE: There were 2 observations read from the data set WORK.CSCTF17.
+NOTE: The data set WORK.COMBINED has 34 observations and 6 variables.
+NOTE: DATA elapsed:
+  wall  0.04 seconds
+  cpu   0.04 seconds
+NOTE: PROC PRINT data=WORK.COMBINED
+
+NOTE: PROC PRINT completed: 34 observations printed, 6 variables
+NOTE: PROC TABULATE
+438
+439         DATA fin.my_hcmst;
+440            SET fin.my_hcmst;
+441            IF RELATIONSHIP_QUALITY = "5" THEN Excellent_Indicator = 1;
+442            ELSE IF NOT MISSING(RELATIONSHIP_QUALITY) THEN Excellent_Indicator = 0;
+443            ELSE Excellent_Indicator = .;
+444        RUN;
+NOTE: DATA FIN.MY_HCMST
+
+
+NOTE: There were 40 observations read from the data set FIN.MY_HCMST.
+NOTE: The data set FIN.MY_HCMST has 40 observations and 24 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+445        %MYCHI(Excellent_Indicator,  Excellent_Indicator, eiformat., fin.my_hcmst);
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF2
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF2 has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF3
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF3 has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF4
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF4 has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF5
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF5 has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF6
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF6 has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF7
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF7 has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF8
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF8 has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF9
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF9 has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF10
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF10 has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF11
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF11 has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF12
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF12 has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF13
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF13 has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF14
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF14 has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF15
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF15 has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF16
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF16 has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: ODS OUTPUT: CROSSTABFREQS -> WORK.CTF
+NOTE: ODS OUTPUT: CHISQ -> WORK.CS
+NOTE: PROC FREQ
+NOTE: PROC FREQ statement used.
+NOTE: PROC SORT data=WORK.CTF
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: The data set WORK.CTF has 2 observations and 9 variables.
+NOTE: PROC SORT statement used.
+NOTE: PROC SORT data=WORK.CS
+
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CS has 1 observations and 5 variables.
+NOTE: PROC SORT statement used.
+NOTE: DATA WORK.CSCTF17
+
+
+NOTE: There were 2 observations read from the data set WORK.CTF.
+NOTE: There were 1 observations read from the data set WORK.CS.
+NOTE: The data set WORK.CSCTF17 has 2 observations and 5 variables.
+NOTE: DATA elapsed:
+  wall  0.00 seconds
+  cpu   0.00 seconds
+NOTE: DATA WORK.COMBINED
+
+
+NOTE: There were 2 observations read from the data set WORK.CSCTF.
+NOTE: There were 2 observations read from the data set WORK.CSCTF2.
+NOTE: There were 2 observations read from the data set WORK.CSCTF3.
+NOTE: There were 2 observations read from the data set WORK.CSCTF4.
+NOTE: There were 2 observations read from the data set WORK.CSCTF5.
+NOTE: There were 2 observations read from the data set WORK.CSCTF6.
+NOTE: There were 2 observations read from the data set WORK.CSCTF7.
+NOTE: There were 2 observations read from the data set WORK.CSCTF8.
+NOTE: There were 2 observations read from the data set WORK.CSCTF9.
+NOTE: There were 2 observations read from the data set WORK.CSCTF10.
+NOTE: There were 2 observations read from the data set WORK.CSCTF11.
+NOTE: There were 2 observations read from the data set WORK.CSCTF12.
+NOTE: There were 2 observations read from the data set WORK.CSCTF13.
+NOTE: There were 2 observations read from the data set WORK.CSCTF14.
+NOTE: There were 2 observations read from the data set WORK.CSCTF15.
+NOTE: There were 2 observations read from the data set WORK.CSCTF16.
+NOTE: There were 2 observations read from the data set WORK.CSCTF17.
+NOTE: The data set WORK.COMBINED has 34 observations and 6 variables.
+NOTE: DATA elapsed:
+  wall  0.04 seconds
+  cpu   0.04 seconds
+NOTE: PROC PRINT data=WORK.COMBINED
+
+NOTE: PROC PRINT completed: 34 observations printed, 6 variables
+NOTE: PROC TABULATE

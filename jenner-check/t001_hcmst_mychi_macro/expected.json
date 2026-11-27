@@ -1,0 +1,19 @@
+{
+  "_captured_at": "2026-11-27T16:41:17.549349Z",
+  "_captured_run_id": "r_5acc4e7d0b014e85950cdf74463b5237",
+  "status": "ok",
+  "exit_code": 0,
+  "log_contains": [
+    "NOTE: The data set WORK.COMBINED has 34 observations and 6 variables.",
+    "NOTE: The data set FIN.MY_HCMST has 40 observations and 22 variables.",
+    "NOTE: PROC PRINT completed: 34 observations printed, 6 variables"
+  ],
+  "log_does_not_contain": [
+    "ERROR:",
+    "[JENNER-ERROR"
+  ],
+  "diagnostics": {
+    "parse_warnings": [],
+    "runtime_warnings": []
+  }
+}
